@@ -10,6 +10,7 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
+    "esbuild": "0.18.13",
     "vue": "^3.3.4"
   },
   "devDependencies": {
