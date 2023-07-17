@@ -24,7 +24,7 @@ export const ElectronBuildPlugin = (): Plugin | any => {
     closeBundle() {
       buildBackground()
       // electron-builder 需要指定 package.json main 属性
-      const packageJson = JSON.parse(fs.readFileSync("/package.json", "utf-8"))
+      const packageJson = JSON.parse(fs.readFileSync("package.json", "utf-8"))
       packageJson.main = "background.js"
       fs.writeFileSync("dist/package.json", JSON.stringify(packageJson, null, 4))
       // bug electron-builder 会下载垃圾文件，还下不动，解决这个bug
